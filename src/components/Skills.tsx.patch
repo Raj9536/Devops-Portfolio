@@ -1,0 +1,34 @@
+{ name: "Cloud Computing Foundation", status: "A99889B467F8" },
+    { name: "Google Cloud Arcade", status: "31 Points Earned" },   
+    { name: "AWS Cloud Practitioner", status: "In Progress" },
+    
+  ];
+=======
+  const certifications = [
+    { name: "Cloud Computing Foundation", credentialId: "A99889B467F8", status: "Completed" },
+    { name: "Google Cloud Arcade", credentialId: "31 Points Earned", status: "Completed" },   
+    { name: "AWS Cloud Practitioner", credentialId: "", status: "In Progress" },
+  ];
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="flex items-center justify-between p-3 bg-secondary rounded-lg">
+                    <span className="font-medium text-foreground">{cert.name}</span>
+                    <span className="text-sm text-primary font-medium">{cert.status}</span>
+                  </div>
+                ))}
+=======
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="flex flex-col p-3 bg-secondary rounded-lg">
+                    <div className="flex justify-between">
+                      <span className="font-medium text-foreground">{cert.name}</span>
+                      <span className="text-sm text-primary font-medium">{cert.status}</span>
+                    </div>
+                    {cert.credentialId && (
+                      <div className="text-sm text-muted-foreground mt-1">
+                        Credential ID: {cert.credentialId}
+                      </div>
+                    )}
+                  </div>
+                ))}
